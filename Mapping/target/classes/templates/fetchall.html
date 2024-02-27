@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Fetch All</title>
+</head>
+
+<body>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Sid</th>
+				<th>S_Name</th>
+				<th>C_Name</th>
+				<th>C_Fees</th>
+				<th>C_Duration</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="a:${objects}">
+				<th th:text="${a.id}"></th>
+				<th th:text="${a.name}"></th>
+				<th th:text="${a.course.name}"></th>
+				<th th:text="${a.course.fees}"></th>
+				<th th:text="${a.course.duration}"></th>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>
